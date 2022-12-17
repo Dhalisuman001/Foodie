@@ -1,9 +1,12 @@
-import SplashScreen from "./src/components/splash/SplashScreen";
-
+import { NavigationContainer } from "@react-navigation/native";
+import Navigator from "./src/components/navigation/Navigator";
+import { Provider as PaperProvider } from "react-native-paper";
 export default function App() {
   return (
-    <>
-      <SplashScreen />
-    </>
+    <PaperProvider>
+      <NavigationContainer>
+        <Navigator />
+      </NavigationContainer>
+    </PaperProvider>
   );
 }
