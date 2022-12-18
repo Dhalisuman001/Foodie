@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-const FooDdItem = ({ item }) => {
+const FoodItem = ({ item }) => {
   return (
     <View style={styles.foodItem}>
       <TouchableOpacity
@@ -32,7 +32,7 @@ const FooDdItem = ({ item }) => {
   );
 };
 
-export default FooDdItem;
+export default FoodItem;
 
 const styles = StyleSheet.create({
   foodItem: {
