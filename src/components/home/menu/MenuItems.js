@@ -3,7 +3,7 @@ import { View, StyleSheet, FlatList } from "react-native";
 
 import Items from "./Items";
 
-const MenuItem = () => {
+const MenuItem = ({ navigation }) => {
   const item = [
     {
       name: "Sea Food",
@@ -30,7 +30,7 @@ const MenuItem = () => {
   return (
     <View>
       {item.map((item, _) => {
-        return <Items item={item} key={_} />;
+        return <Items item={item} key={_} navigation={navigation} />;
       })}
     </View>
   );

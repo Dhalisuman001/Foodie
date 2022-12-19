@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-const FoodItem = ({ item }) => {
+const FoodItem = ({ item, navigation }) => {
   return (
     <View style={styles.foodItem}>
       <TouchableOpacity
         onPress={() => {
-          alert("testing");
+          navigation.navigate("Products");
         }}
       >
         <View style={styles.itemWrapper}>

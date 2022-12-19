@@ -7,7 +7,7 @@ import FoodSearch from "./search/FoodSearch";
 import Category from "./category/Category";
 import Poster from "./poster/Poster";
 import MenuItem from "./menu/MenuItems";
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -17,7 +17,7 @@ const Home = () => {
           <Category />
         </View>
         <Poster />
-        <MenuItem />
+        <MenuItem navigation={navigation} />
       </ScrollView>
     </View>
   );

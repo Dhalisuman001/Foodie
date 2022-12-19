@@ -8,9 +8,9 @@ import {
 } from "react-native";
 import FoodItem from "./FoodItem";
 
-const Items = ({ item }) => {
+const Items = ({ item, navigation }) => {
   const renderItem = ({ item }) => {
-    return <FoodItem item={item} />;
+    return <FoodItem item={item} navigation={navigation} />;
   };
   return (
     <View>
