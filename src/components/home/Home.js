@@ -11,7 +11,7 @@ const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <Header />
+        <Header navigation={navigation} />
         <FoodSearch />
         <View style={{ height: 40 }}>
           <Category />

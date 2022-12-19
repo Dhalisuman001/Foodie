@@ -13,9 +13,11 @@ const Navigator = () => {
           routeName = "home";
           return <Ionicons name={routeName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "#f26f18",
+        tabBarActiveTintColor: "#248dc9",
         tabBarInactiveTintColor: "gray",
         headerShown: false,
+        title: "",
+        tabBarHideOnKeyboard: true,
       })}
     >
       <Tab.Screen name="HomeStackScreen" component={HomePage} />

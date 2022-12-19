@@ -3,84 +3,104 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import ToggleQuantity from "./ToggleQuantity";
+import Button from "./Button";
+import { ScrollView } from "react-native-gesture-handler";
 const Products = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.imgWrapper}>
-        <TouchableOpacity>
-          <View style={styles.wishlist}>
-            <AntDesign
-              style={styles.icon}
-              name="heart"
-              size={25}
-              color="#62c480"
-            />
-          </View>
-        </TouchableOpacity>
-        <View style={styles.img}>
-          <Text style={{ fontSize: 130 }}> 🦞</Text>
-        </View>
-      </View>
-      <View style={styles.detailsWrapper}>
-        <View>
-          <Text
-            style={{
-              fontSize: 25,
-              fontWeight: "bold",
-              textAlign: "center",
-              padding: 20,
-            }}
-          >
-            Lorem ipsum dolor
-          </Text>
-        </View>
-        <Text numberOfLines={3} style={{ fontSize: 15, marginHorizontal: 15 }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-          numquam facilis saepe, culpa architecto atque sint totam quis adipisci
-          praesentium sapiente quam
-        </Text>
-        <View style={styles.rating_location}>
-          <View style={{ flexDirection: "row" }}>
-            <AntDesign style={styles.icon} name="star" size={25} color="red" />
-            <Text style={styles.text}>4.6</Text>
-          </View>
-          <View style={{ flexDirection: "row" }}>
-            <AntDesign
-              style={styles.icon}
-              name="enviroment"
-              size={25}
-              color="red"
-            />
-            <Text style={styles.text}>3 km</Text>
-          </View>
-        </View>
-        <View style={styles.priceWrapper}>
-          <Text style={styles.itemPrice}>
-            <Text style={{ fontSize: 20, fontWeight: "400" }}>Price </Text>
-            <Text> ₹999</Text>
-          </Text>
-          <TouchableOpacity
-            onPress={() => {
-              alert("Will Fix it!");
-            }}
-            style={{
-              backgroundColor: "#dff0ea",
-              borderRadius: 19,
-              margin: 10,
-            }}
-          >
-            <Ionicons
-              style={styles.groupIcon}
-              name="md-cart"
-              size={28}
-              color="#2a8c6d"
-            />
+      <ScrollView>
+        <View style={styles.imgWrapper}>
+          <TouchableOpacity>
+            <View style={styles.wishlist}>
+              <AntDesign
+                style={styles.icon}
+                name="heart"
+                size={25}
+                color="#62c480"
+              />
+            </View>
           </TouchableOpacity>
+          <View style={styles.img}>
+            <Text style={{ fontSize: 130 }}> 🦞</Text>
+          </View>
         </View>
-        <View style={styles.quantityWrapper}>
-          <ToggleQuantity />
+        <View style={styles.detailsWrapper}>
+          <View>
+            <Text
+              style={{
+                fontSize: 25,
+                fontWeight: "bold",
+                textAlign: "center",
+                padding: 20,
+              }}
+            >
+              Lorem ipsum dolor
+            </Text>
+          </View>
+          <Text
+            numberOfLines={3}
+            style={{ fontSize: 15, marginHorizontal: 15 }}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            numquam facilis saepe, culpa architecto atque sint totam quis
+            adipisci praesentium sapiente quam
+          </Text>
+          <View style={styles.rating_location}>
+            <View style={{ flexDirection: "row" }}>
+              <AntDesign
+                style={styles.icon}
+                name="star"
+                size={25}
+                color="red"
+              />
+              <Text style={styles.text}>4.6</Text>
+            </View>
+            <View style={{ flexDirection: "row" }}>
+              <AntDesign
+                style={styles.icon}
+                name="enviroment"
+                size={25}
+                color="red"
+              />
+              <Text style={styles.text}>3 km</Text>
+            </View>
+          </View>
+          <View style={styles.priceWrapper}>
+            <Text style={styles.itemPrice}>
+              <Text style={{ fontSize: 20, fontWeight: "400" }}>Price </Text>
+              <Text> ₹999</Text>
+            </Text>
+            <TouchableOpacity
+              onPress={() => {
+                alert("Will Fix it!");
+              }}
+              style={{
+                backgroundColor: "#dff0ea",
+                borderRadius: 19,
+                margin: 10,
+              }}
+            >
+              <Ionicons
+                style={styles.groupIcon}
+                name="md-cart"
+                size={28}
+                color="#2a8c6d"
+              />
+            </TouchableOpacity>
+          </View>
+          <View style={styles.quantityWrapper}>
+            <ToggleQuantity />
+          </View>
+          <View
+            style={{
+              justifyContent: "center",
+              flexDirection: "row",
+            }}
+          >
+            <Button name="Add to Cart" />
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 };

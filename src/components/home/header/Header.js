@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-const Header = () => {
+const Header = ({ navigation }) => {
   return (
     <View style={styles.header}>
       <View style={styles.group}>
@@ -12,7 +12,7 @@ const Header = () => {
       </View>
       <TouchableOpacity
         onPress={() => {
-          alert("Will Fix it!");
+          navigation.navigate("Order Details");
         }}
         style={{ backgroundColor: "#dff0ea", borderRadius: 19, margin: 10 }}
       >
