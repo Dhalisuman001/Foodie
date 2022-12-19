@@ -5,6 +5,7 @@ import Products from "../products/Products";
 import OrderDetails from "../order/OrderDetails";
 import PaymentOption from "../payment/PaymentOption";
 import Map from "../map/Map";
+import Status from "../order/Status";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ const Index = () => {
       <Stack.Screen name="Order Details" component={OrderDetails} />
       <Stack.Screen name="Payment Option" component={PaymentOption} />
       <Stack.Screen name="Map" component={Map} />
+      <Stack.Screen name="Order Status" component={Status} />
     </Stack.Navigator>
   );
 };

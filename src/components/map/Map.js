@@ -5,14 +5,16 @@ import { StyleSheet, View, Text, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 // import RNLocation from "react-native-location";
 
-export default function App() {
+export default function App({ navigation }) {
   const [location, setLocation] = useState({
     latitude: 37.78825,
     longitude: -122.4324,
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
   });
-
+  const orderStatus = () => {
+    navigation.navigate("Order Status");
+  };
   return (
     <View style={styles.container}>
       <MapView style={styles.map} region={location}>
@@ -38,9 +40,9 @@ export default function App() {
         </TouchableOpacity>
       </View>
       <View style={styles.agent}>
-        <View
+        <TouchableOpacity
           activeOpacity={0.7}
-          // onPress={clickHandler}
+          onPress={orderStatus}
           style={{ flexDirection: "row", justifyContent: "space-between" }}
         >
           <Image
@@ -53,7 +55,7 @@ export default function App() {
             </Text>
             <Text style={{ color: "#c3c7c5" }}>📍 5 mins on the way</Text>
           </View>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

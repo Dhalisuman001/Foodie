@@ -9,6 +9,7 @@ const OrderDetails = ({ navigation }) => {
   const checkOut = () => {
     navigation.navigate("Map");
   };
+
   return (
     <View>
       {/* coupon */}
