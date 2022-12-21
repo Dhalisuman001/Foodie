@@ -7,6 +7,7 @@ import FoodSearch from "./search/FoodSearch";
 import Category from "./category/Category";
 import Poster from "./poster/Poster";
 import MenuItem from "./menu/MenuItems";
+import Card from "./poster/Card";
 const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -16,7 +17,8 @@ const Home = ({ navigation }) => {
         <View style={{ height: 40 }}>
           <Category />
         </View>
-        <Poster />
+        {/* <Poster /> */}
+        <Card />
         <MenuItem navigation={navigation} />
       </ScrollView>
     </View>
